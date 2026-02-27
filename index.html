@@ -50,39 +50,44 @@
 
     <main id="main">
       <section class="hero">
-        <div class="container hero-grid">
-          <div>
+        <div class="container">
+          <div class="hero-center">
             <div class="kicker">LIVE SCHOOL BUS TRACKING FOR OPERATORS, SCHOOLS & PARENTS</div>
-            <h1>Live bus tracking and smart ticketing, built for UK operators.</h1>
+            <h1>Live tracking and smart ticketing for UK school transport.</h1>
             <p class="lede">
-              Trackaroo brings live vehicle visibility together with digital passes and scanning — so parents get reassurance, drivers stay focused, and operators reduce admin.
+              Trackaroo helps operators run school services with less admin: digital passes, driver scanning, optional live tracking, and clear disruption messaging.
             </p>
             <div class="hero-cta">
               <a class="button primary" href="#contact">Book a demo</a>
-              <a class="button" href="/school-bus-tracking/">View tracking features</a>
-              <a class="button" href="/school-bus-ticketing/">View ticketing features</a>
+              <a class="button" href="/for-operators/">Who we help</a>
+              <a class="button" href="#how">How it works</a>
             </div>
             <p class="small">Parent app · Driver app · Operator portal</p>
           </div>
 
-          <aside class="hero-card" aria-label="Quick benefits">
-            <p class="card-title">Everything you need to modernise school transport</p>
-            <p class="card-text">Digital passes, optional live tracking, scanning, disruption messaging, and BODS-aware data — without clunky ticket machines.</p>
-            <div class="badge-row" aria-label="Highlights">
-              <span class="badge">QR passes</span>
-              <span class="badge">Driver scanning</span>
-              <span class="badge">Route replay</span>
-              <span class="badge">Parent notifications</span>
-              <span class="badge">CSV imports</span>
-              <span class="badge">BODS-ready mindset</span>
+          <div class="stats-row" aria-label="Highlights">
+            <div class="stat">
+              <div class="stat-title">Reduce calls</div>
+              <div class="stat-text">Parents see the bus and get updates.</div>
             </div>
-          </aside>
+            <div class="stat">
+              <div class="stat-title">Reduce fraud</div>
+              <div class="stat-text">QR passes + driver scanning logs.</div>
+            </div>
+            <div class="stat">
+              <div class="stat-title">Stay flexible</div>
+              <div class="stat-text">Driver app GPS or integrated feeds.</div>
+            </div>
+          </div>
         </div>
       </section>
 
       <section class="section">
         <div class="container">
-          <h2>What Trackaroo delivers</h2>
+          <h2>What is Trackaroo?</h2>
+          <p class="lede" style="font-size:16px; margin-top: -4px;">
+            A single platform that brings ticketing and (optional) live bus tracking together — built for UK coach and school transport operators.
+          </p>
           <div class="grid-3">
             <div class="feature">
               <h3>Live bus tracking & route replay</h3>
@@ -100,20 +105,31 @@
         </div>
       </section>
 
-      <section class="section">
+      <section class="section section-alt" id="how">
         <div class="container split">
-          <div class="callout">
-            <h2>Keep parents in the loop</h2>
-            <p class="lede" style="font-size:16px; margin-bottom: 0;">
-              When a service is delayed or a route changes, Trackaroo helps you notify the right parents quickly — reducing inbound calls while improving confidence and safeguarding.
-            </p>
+          <div>
+            <h2>How it works</h2>
+            <ol class="steps" aria-label="How it works steps">
+              <li class="step"><strong>Set up routes & students</strong><div class="small">Import via CSV or manage in the operator portal.</div></li>
+              <li class="step"><strong>Issue QR passes</strong><div class="small">Parents use digital passes instead of paper tickets.</div></li>
+              <li class="step"><strong>Drivers scan</strong><div class="small">Quick scanning with logs for AM/PM journeys.</div></li>
+              <li class="step"><strong>Optional live tracking</strong><div class="small">Share live location via driver app GPS or integrated feeds.</div></li>
+            </ol>
+            <div class="hero-cta" style="margin-top: 12px;">
+              <a class="button" href="/school-bus-ticketing/">Ticketing</a>
+              <a class="button" href="/school-bus-tracking/">Tracking</a>
+              <a class="button" href="/bods-compliance/">BODS</a>
+            </div>
           </div>
+
           <div class="hero-card">
-            <p class="card-title">Built for UK transport operations</p>
-            <p class="card-text">Multiple tracking sources (driver app GPS or integrated feeds), route history, exports, and a compliance-aware approach to UK data standards.</p>
-            <div class="hero-cta" style="margin-top: 14px;">
-              <a class="button" href="/bods-compliance/">BODS & compliance</a>
-              <a class="button" href="/for-operators/">For operators</a>
+            <p class="card-title">Keep parents in the loop</p>
+            <p class="card-text">Send disruption messages, reduce inbound calls, and provide reassurance with real-time visibility.</p>
+            <div class="badge-row" aria-label="Highlights">
+              <span class="badge">Disruption alerts</span>
+              <span class="badge">Boarding notifications</span>
+              <span class="badge">Route history</span>
+              <span class="badge">Exports</span>
             </div>
           </div>
         </div>
@@ -127,7 +143,7 @@
           <div class="split">
             <div class="hero-card">
               <p class="card-title">Send an enquiry</p>
-              <p class="card-text">This staging form opens your email client (no backend needed). We can wire it to a server endpoint later.</p>
+              <p class="card-text">This staging form opens your email client (no backend needed).</p>
               <form id="contact-form">
                 <div class="grid-3" style="grid-template-columns: 1fr 1fr; gap: 10px;">
                   <label>
