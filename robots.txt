@@ -1,0 +1,7 @@
+User-agent: *
+
+# Staging default: block crawling/indexing.
+# When moving to the main domain, change this to `Disallow:` (empty) to allow crawling.
+Disallow: /
+
+Sitemap: https://trackaroo.co.uk/sitemap.xml
