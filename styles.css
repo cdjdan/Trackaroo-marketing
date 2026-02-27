@@ -6,8 +6,10 @@
   --muted: #475569;
   --border: #e2e8f0;
   --shadow: 0 12px 30px rgba(2, 6, 23, 0.10);
-  --accent: #0ea5e9;
-  --accent-2: #14b8a6;
+  /* Trackaroo brand accents (adjust here if you have exact hex values) */
+  --brand: #0ea5e9;
+  --brand-2: #14b8a6;
+  --brand-ink: #ffffff;
   --radius: 14px;
   --radius-sm: 10px;
   --max: 1120px;
@@ -71,7 +73,7 @@ a:hover { text-decoration: underline; }
   width: 30px;
   height: 30px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
   box-shadow: 0 10px 20px rgba(14, 165, 233, 0.18);
 }
 
@@ -116,7 +118,11 @@ a:hover { text-decoration: underline; }
 .button.primary {
   border: 1px solid rgba(14, 165, 233, 0.25);
   background: linear-gradient(135deg, rgba(14, 165, 233, 0.92), rgba(20, 184, 166, 0.92));
-  color: #ffffff;
+  color: var(--brand-ink);
+}
+
+.button.primary:hover {
+  filter: saturate(1.03) brightness(0.98);
 }
 
 .mobile-toggle {
@@ -359,12 +365,60 @@ h1 {
   box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
 }
 
+.media-card {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.media-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.media-caption {
+  padding: 10px 12px;
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.shot-grid {
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.shot-grid .media-card:first-child {
+  grid-row: span 2;
+}
+
+.logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 0 0;
+}
+
+.logo-row img {
+  height: 34px;
+  width: auto;
+  opacity: 0.85;
+}
+
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
   .grid-3 { grid-template-columns: 1fr; }
   .split { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .stats-row { grid-template-columns: 1fr; }
+  .shot-grid { grid-template-columns: 1fr; }
+  .shot-grid .media-card:first-child { grid-row: auto; }
 
   .mobile-toggle { display: inline-flex; }
   .nav {
