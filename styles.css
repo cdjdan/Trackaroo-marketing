@@ -1,11 +1,13 @@
 :root {
-  --bg: #0b1220;
-  --panel: rgba(255, 255, 255, 0.06);
-  --panel-2: rgba(255, 255, 255, 0.09);
-  --text: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.72);
-  --border: rgba(255, 255, 255, 0.12);
-  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --text: #0f172a;
+  --muted: #475569;
+  --border: #e2e8f0;
+  --shadow: 0 12px 30px rgba(2, 6, 23, 0.10);
+  --accent: #0ea5e9;
+  --accent-2: #14b8a6;
   --radius: 14px;
   --radius-sm: 10px;
   --max: 1120px;
@@ -16,9 +18,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-  background: radial-gradient(1000px 600px at 20% 0%, rgba(94, 234, 212, 0.16), transparent 60%),
-              radial-gradient(800px 500px at 80% 10%, rgba(56, 189, 248, 0.18), transparent 55%),
-              var(--bg);
+  background: var(--bg);
   color: var(--text);
   line-height: 1.45;
 }
@@ -47,7 +47,7 @@ a:hover { text-decoration: underline; }
   top: 0;
   z-index: 50;
   backdrop-filter: blur(10px);
-  background: rgba(11, 18, 32, 0.72);
+  background: rgba(255, 255, 255, 0.86);
   border-bottom: 1px solid var(--border);
 }
 
@@ -71,8 +71,8 @@ a:hover { text-decoration: underline; }
   width: 30px;
   height: 30px;
   border-radius: 10px;
-  background: linear-gradient(135deg, rgba(56,189,248,0.95), rgba(94,234,212,0.95));
-  box-shadow: 0 10px 20px rgba(56,189,248,0.15);
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+  box-shadow: 0 10px 20px rgba(14, 165, 233, 0.18);
 }
 
 .nav {
@@ -104,18 +104,19 @@ a:hover { text-decoration: underline; }
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: var(--surface);
   color: var(--text);
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
 }
 
-.button:hover { text-decoration: none; background: rgba(255,255,255,0.07); }
+.button:hover { text-decoration: none; background: var(--surface-2); }
 
 .button.primary {
-  border: 1px solid rgba(94, 234, 212, 0.35);
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.18), rgba(56, 189, 248, 0.16));
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  background: linear-gradient(135deg, rgba(14, 165, 233, 0.92), rgba(20, 184, 166, 0.92));
+  color: #ffffff;
 }
 
 .mobile-toggle {
@@ -140,7 +141,7 @@ a:hover { text-decoration: underline; }
   padding: 6px 10px;
   border-radius: 999px;
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.04);
+  background: var(--surface);
   color: var(--muted);
   font-size: 13px;
 }
@@ -167,7 +168,7 @@ h1 {
 
 .hero-card {
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 18px;
   box-shadow: var(--shadow);
@@ -201,7 +202,7 @@ h1 {
 
 .feature {
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 16px;
 }
@@ -225,8 +226,8 @@ h1 {
 }
 
 .callout {
-  border: 1px solid rgba(56, 189, 248, 0.22);
-  background: linear-gradient(135deg, rgba(56,189,248,0.10), rgba(94,234,212,0.08));
+  border: 1px solid rgba(14, 165, 233, 0.20);
+  background: var(--surface-2);
   border-radius: var(--radius);
   padding: 18px;
 }
@@ -240,6 +241,7 @@ h1 {
   border-top: 1px solid var(--border);
   padding: 24px 0;
   color: var(--muted);
+  background: var(--surface-2);
 }
 
 .footer-grid {
@@ -263,7 +265,7 @@ h1 {
   border: 1px solid var(--border);
   border-radius: 999px;
   padding: 6px 10px;
-  background: rgba(255,255,255,0.03);
+  background: var(--surface);
 }
 
 .page-title {
@@ -276,7 +278,7 @@ h1 {
 
 .faq {
   border: 1px solid var(--border);
-  background: rgba(255,255,255,0.03);
+  background: var(--surface);
   border-radius: var(--radius);
   padding: 14px 16px;
 }
@@ -289,6 +291,22 @@ h1 {
 }
 
 .faq p { color: var(--muted); margin: 10px 0 0; }
+
+.field {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+}
+
+.field:focus {
+  outline: none;
+  border-color: rgba(14, 165, 233, 0.40);
+  box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.12);
+}
 
 @media (max-width: 900px) {
   .hero-grid { grid-template-columns: 1fr; }
@@ -304,7 +322,7 @@ h1 {
     right: 0;
     top: 58px;
     padding: 12px 16px 16px;
-    background: rgba(11, 18, 32, 0.92);
+    background: rgba(255, 255, 255, 0.96);
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: flex-start;

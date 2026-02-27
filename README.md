@@ -30,6 +30,16 @@ Plesk setups vary, but the common flow is:
 5. Add your SSH key (or use HTTPS credentials) so Plesk can pull.
 6. Click **Deploy** after each push (or enable auto-deploy if your Plesk supports it).
 
+### Pushing this repo to GitHub (example)
+If you don’t already have a remote repo, create one on GitHub (e.g. `trackaroo-marketing`). Then:
+
+```bash
+git remote add origin git@github.com:<your-org-or-user>/trackaroo-marketing.git
+git push -u origin main
+```
+
+In Plesk Git, point the repository to that GitHub URL and deploy.
+
 This repo is pure static HTML/CSS/JS, so there’s no Node build step required.
 
 ## SEO / staging note
